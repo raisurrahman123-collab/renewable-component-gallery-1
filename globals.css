@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+/* Site tokens: bg-paper, text-ink, text-muted, border-line, text-leaf, bg-sun ... */
+@theme {
+  --font-sans: "Bricolage Grotesque", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Code", Menlo, Consolas, monospace;
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-leaf: var(--leaf);
+  --color-sun: var(--sun);
+  --color-sky: var(--sky);
+}
+
+:root {
+  --paper: #eef4f6;   /* morning sky haze */
+  --surface: #fbfdfd;
+  --ink: #0f2a33;     /* deep turbine-tower teal */
+  --muted: #45616c;
+  --line: #c4d6dc;
+  --leaf: #157548;    /* links and accents, 5:1 on paper */
+  --sun: #ffc42e;     /* fills only, never text */
+  --sky: #cfe6ef;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0b1a1f;
+    --surface: #11242a;
+    --ink: #e2eef1;
+    --muted: #95adb5;
+    --line: #22383f;
+    --leaf: #62d39b;
+    --sun: #ffc933;
+    --sky: #17323b;
+    color-scheme: dark;
+  }
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+}
